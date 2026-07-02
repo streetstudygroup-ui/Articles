@@ -393,3 +393,77 @@ figcaption {
     margin-top: 0.5rem;
   }
 }
+
+/* === Everyday Life refinements: rounded corners + hover states === */
+
+:root {
+  --radius-soft: 10px;
+  --radius-small: 6px;
+  --hover-grey: #e6e6e6;
+  --hover-dark: #444444;
+}
+
+/* Rounded cards */
+.journal-card,
+.title-card,
+.content-section,
+.sidebar-box,
+.site-footer {
+  border-radius: var(--radius-soft);
+}
+
+/* Rounded cover and figures */
+.mini-cover,
+.journal-card img,
+figure img {
+  border-radius: var(--radius-small);
+}
+
+/* Make buttons feel clickable */
+.primary-button,
+.sidebar-box a,
+.site-topbar a,
+.site-footer a,
+.content-section a,
+.keywords span {
+  transition: 
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease,
+    opacity 0.18s ease;
+}
+
+/* Black buttons hover into grey */
+.primary-button:hover {
+  background: var(--hover-dark);
+  border-color: var(--hover-dark);
+  color: var(--white) !important;
+}
+
+/* Right-side article index hover */
+.sidebar-box a:hover {
+  background: var(--hover-grey);
+  color: var(--black);
+  padding-left: 0.45rem;
+}
+
+/* Text links in article body hover grey */
+.content-section a:hover,
+.site-footer a:hover {
+  background: var(--hover-grey);
+  color: var(--black);
+}
+
+/* Top navigation hover: grey text, not background */
+.site-topbar a:hover {
+  color: #cfcfcf;
+}
+
+/* Keyword tags: slightly softer */
+.keywords span {
+  border-radius: var(--radius-small);
+}
+
+.keywords span:hover {
+  background: var(--white);
+}
