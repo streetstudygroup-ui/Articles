@@ -252,17 +252,19 @@
           <a href="#contact">Contact</a>
         </div>
 
-        <div class="sidebar-box">
-          <h3>Metrics</h3>
-          <div class="metric-row">
-            <strong>1,548</strong>
-            <span>Views</span>
-          </div>
-          <div class="metric-row">
-            <strong>0</strong>
-            <span>Citations</span>
-          </div>
-        </div>
+       <div class="sidebar-box">
+  <h3>Metrics</h3>
+
+  <div class="metric-row">
+    <strong id="view-count">—</strong>
+    <span>Views</span>
+  </div>
+
+  <div class="metric-row">
+    <strong>0</strong>
+    <span>Citations</span>
+  </div>
+</div>
       </aside>
     </section>
 
@@ -272,6 +274,37 @@
     </footer>
 
   </main>
+  
+<script>
+  const goatcounterPath = "/articles/test-article/";
 
+  fetch("https://sinan117.goatcounter.com/counter/" + encodeURIComponent(goatcounterPath) + ".json")
+    .then(response => response.json())
+    .then(data => {
+      const viewCount = document.getElementById("view-count");
+
+      if (data && data.count !== undefined) {
+        viewCount.innerText = data.count;
+      } else {
+        viewCount.innerText = "0";
+      }
+    })
+    .catch(() => {
+      document.getElementById("view-count").innerText = "0";
+    });
+</script>
+
+<script>
+  window.goatcounter = {
+    path: "/articles/test-article/"
+  };
+</script>
+
+<script
+  data-goatcounter="https://sinan117.goatcounter.com/count"
+  async
+  src="//gc.zgo.at/count.js">
+</script>
+  
 </body>
 </html>
