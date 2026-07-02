@@ -2,44 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Everyday Life Article Archive</title>
+
+  <title>Redirecting to Everyday Life Article</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Article archive for Everyday Life: International Journal of Public Culture, Art and Design.">
-  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Do not index this redirect page -->
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Redirect to the article page -->
+  <meta http-equiv="refresh" content="0; url=articles/test-article/">
+
+  <link rel="canonical" href="articles/test-article/">
+
+  <style>
+    body {
+      margin: 0;
+      background: #ffc400;
+      color: #111;
+      font-family: "Courier New", Courier, monospace;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    main {
+      max-width: 720px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(2.5rem, 7vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+      margin: 0 0 1.5rem;
+    }
+
+    a {
+      color: #111;
+      text-underline-offset: 0.2em;
+    }
+  </style>
 </head>
 
 <body>
-  <header class="site-header">
-    <a href="index.html">Everyday Life Articles</a>
-    <nav>
-      <a href="issues/01/">Issue 01</a>
-      <a href="https://everydaylifejournal.uk">Main Site</a>
-    </nav>
-  </header>
-
-  <main class="wrapper">
-    <h1>Everyday Life Article Archive</h1>
-
+  <main>
+    <h1>Everyday Life</h1>
+    <p>Redirecting to the article page...</p>
     <p>
-      This is the article archive of <em>Everyday Life: International Journal of Public Culture, Art and Design</em>,
-      published by Street Study Group.
+      <a href="articles/test-article/">Click here if you are not redirected automatically.</a>
     </p>
-
-    <h2>Current Issue</h2>
-    <p>
-      <a href="issues/01/">Issue 01: Everyday Life Research Across Disciplines</a>
-    </p>
-
-    <h2>Articles</h2>
-    <ul>
-      <li>
-        <a href="articles/test-article/">Test Article: Everyday Life Research Across Disciplines</a>
-      </li>
-    </ul>
   </main>
 
-  <footer>
-    <p>Published by Street Study Group.</p>
-  </footer>
+  <script>
+    window.location.replace("articles/test-article/");
+  </script>
 </body>
 </html>
