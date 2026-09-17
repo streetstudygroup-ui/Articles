@@ -258,6 +258,33 @@ figure img {
   align-self: start;
 }
 
+.pdf-style-figure {
+  margin: 2.2rem 0;
+}
+
+.pdf-style-figure img {
+  border: 0;
+  border-radius: 0;
+}
+
+.pdf-figure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 2.25rem;
+  align-items: start;
+}
+
+.pdf-figure-single img {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.pdf-style-figure figcaption {
+  margin-top: 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
 figcaption {
   margin-top: 0.5rem;
   font-size: 0.85rem;
